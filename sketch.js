@@ -71,7 +71,7 @@ function setup(){
 }
 
 function draw(){
-   background(backgroundImg);
+   background(255,10,10);
     Engine.update(engine);
 
    
