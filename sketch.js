@@ -11,10 +11,7 @@ var b17,b18,b19,b20,b21,b22,b23,b24,b25;
 var polygon,slingshot;
 var score;
 var backgroundImg;
-function preload(){
-    
-    getBackgroundImg();
-}
+
 function setup(){
     var canvas = createCanvas(900,400);
     engine = Engine.create();
@@ -160,22 +157,3 @@ function keyPressed(){
     }
 }
 
-async function getBackgroundImg(){
-    var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
-    var responseJSON = await response.json();
-   
-
-    var datetime = responseJSON.datetime;
-    var hour = datetime.slice(11,13);
- 
-
-if (hour>=06 && hour<=18){
-    backgroundImg = color(244,211,65);
-}
-else{
-    backgroundImg = color(139,27,1);
-}
-  
-  
-
-}
